@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-error page11
+error page112
 <c:import url="test.jsp"><c:param name="name" value="123"/></c:import>
 
 </body>
