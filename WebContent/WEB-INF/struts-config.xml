@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+    "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+    <!-- Global configuration settings -->
+    <form-beans>
+        <!-- Define form beans (action forms) -->
+        <form-bean name="UserForm" type="com.lz.form.UserForm"/>
+        <!-- More form beans... -->
+    </form-beans>
+
+    <global-exceptions>
+        <!-- Define global exception handlers -->
+        <exception
+            key="application.exception"
+            type="com.example.ApplicationException"
+            path="/error.jsp"/>
+        <!-- More global exceptions... -->
+    </global-exceptions>
+
+    <global-forwards>
+        <!-- Define global forwards -->
+        <forward name="success" path="/WEB-INF/success.jsp"/>
+        <!-- More global forwards... -->
+    </global-forwards>
+
+    <action-mappings>
+        <!-- Define action mappings -->
+        <action
+            path="/login"
+            type="com.lz.action.LoginAction"
+            name="UserForm"
+            scope="request"
+            input="/WEB-INF/login.jsp"
+            validate="true">
+            <forward name="success" path="/WEB-INF/welcome.jsp"/>
+            <forward name="error" path="/WEB-INF/error.jsp"/>
+        </action>
+        
+        <!-- More action mappings... -->
+    </action-mappings>
+
+    <!-- Other configuration elements (plugins, message resources, etc.) -->
+</struts-config>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM "path/to/local/hibernate-configuration-5.6.xsd">
+    <hibernate-mapping>
+    <class name="com.lz.domain.Employees" table="employees">
+    <id name="id" column="id">
+    <generator class="native"></generator>
+    </id>
+    <property name="first_name" column="first_name">
+    </property>
+    <property name="last_name" column="last_name">
+    </property>
+    <property name="email" column="email">
+    </property>
+    <property name="hire_date" column="hire_date">
+    </property>
+    <property name="salary" column="salary">
+    </property>
+    <property name="department_id" column="department_id">
+    </property>
+    </class>
+    </hibernate-mapping>
+</hibernate-configuration>
